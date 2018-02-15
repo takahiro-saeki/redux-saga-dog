@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./index.js","dynamic":true}],"generated":{"html":"<html>\n  <head>\n    <title>react-redux with redux-saga dog</title>\n  </head>\n  <body>\n    <div id=\"app\"></div>\n    <script src=\"/dist/ec190c21a26ce2803c87c95c4e3eb9c7.js\"></script>\n  </body>\n</html>\n"},"hash":"3b89a0ee587852464010b9508cb76a81","cacheData":{}}

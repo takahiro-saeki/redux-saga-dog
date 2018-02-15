@@ -1,0 +1,99 @@
+{
+  "name": "redux-saga-dog",
+  "version": "0.0.1",
+  "description": "this is example for understanding of redux-saga.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takahiro-saeki/redux-saga-dog.git"
+  },
+  "keywords": [
+    "redux-saga",
+    "redux",
+    "react"
+  ],
+  "author": "takahiro-saeki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/takahiro-saeki/redux-saga-dog/issues"
+  },
+  "homepage": "https://github.com/takahiro-saeki/redux-saga-dog#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.5",
+    "react": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.16.0",
+    "styled-components": "^3.1.6",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.3.13",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.2.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-dynamic-import-webpack": "^1.0.2",
+    "babel-plugin-module-resolver": "3.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.9",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-flowtype": "^2.44.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.6.1",
+    "file-loader": "^1.1.6",
+    "flow-bin": "^0.65.0",
+    "flow-coverage-report": "^0.4.1",
+    "html-webpack-plugin": "^2.30.1",
+    "image-webpack-loader": "^4.1.0",
+    "jest": "^22.3.0",
+    "jest-styled-components": "^4.10.0",
+    "lodash-webpack-plugin": "^0.11.4",
+    "postcss-loader": "^2.1.0",
+    "postcss-size": "^2.0.0",
+    "pre-commit": "^1.2.2",
+    "precss": "^3.1.0",
+    "prettier": "^1.10.2",
+    "prop-types": "^15.6.0",
+    "puppeteer": "^1.0.0",
+    "react-hot-loader": "^3.1.3",
+    "react-test-renderer": "^16.2.0",
+    "redux-devtools-extension": "^2.13.2",
+    "style-loader": "^0.20.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.11.0",
+    "webpack-bundle-analyzer": "^2.10.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-merge": "^4.1.1"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/shim.js",
+      "./test/jestsetup.js"
+    ]
+  }
+}
