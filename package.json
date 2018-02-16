@@ -1,31 +1,18 @@
 {
   "name": "redux-saga-dog",
-  "version": "0.0.1",
   "description": "this is example for understanding of redux-saga.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/takahiro-saeki/redux-saga-dog.git"
-  },
-  "keywords": [
-    "redux-saga",
-    "redux",
-    "react"
-  ],
+  "version": "0.0.1",
   "author": "takahiro-saeki",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/takahiro-saeki/redux-saga-dog/issues"
   },
-  "homepage": "https://github.com/takahiro-saeki/redux-saga-dog#readme",
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0",
     "styled-components": "^3.1.6",
@@ -45,6 +32,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-plugin-transform-function-bind": "^6.22.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.3.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
@@ -52,6 +40,7 @@
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
+    "babel-runtime": "^6.26.0",
     "cross-env": "^5.1.3",
     "css-loader": "^0.28.9",
     "enzyme": "^3.3.0",
@@ -80,7 +69,7 @@
     "prettier": "^1.10.2",
     "prop-types": "^15.6.0",
     "puppeteer": "^1.0.0",
-    "react-hot-loader": "^3.1.3",
+    "react-hot-loader": "3.1.3",
     "react-test-renderer": "^16.2.0",
     "redux-devtools-extension": "^2.13.2",
     "style-loader": "^0.20.1",
@@ -90,10 +79,25 @@
     "webpack-dev-server": "^2.11.1",
     "webpack-merge": "^4.1.1"
   },
+  "homepage": "https://github.com/takahiro-saeki/redux-saga-dog#readme",
   "jest": {
     "setupFiles": [
       "./test/shim.js",
       "./test/jestsetup.js"
     ]
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "redux-saga"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takahiro-saeki/redux-saga-dog.git"
+  },
+  "scripts": {
+    "start": "parcel src/index.html"
   }
 }
