@@ -14,15 +14,21 @@ class App extends Component {
   }
   
   render() {
+    
     return (
       <main>
         <Header />
+        {this.props.mainImage.map(item => <img src={item} />)}
+        <div onClick={() => this.props.getMainImage()}>test</div>
       </main>
     )
   }
 }
 
-const mapStateToProps = state => ({dog: state.dog})
+const mapStateToProps = state => ({
+  dog: state.dog,
+  mainImage: state.mainImage
+})
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(actions, dispatch);
