@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Header from 'components/Header';
 
-const App = () => (
-  <div>app</div>
-)
-
-export default App;
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
+    return (
+      <main>
+        <Header />
+      </main>
+    )
+  }
+}

@@ -4,7 +4,7 @@ import {delay} from 'redux-saga';
 import actions from 'actions';
 import {put, call, takeEvery, fork, take} from 'redux-saga/effects';
 
-const BASE_PATH = 'http://localhost:3000/api'
+const BASE_PATH = '//dog.ceo/api/breeds/image/random'
 
 function fetchRankApi(url) {
   return fetch(url).then(res => res.json()).then(json => json)
