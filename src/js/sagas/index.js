@@ -17,7 +17,7 @@ function* mainRandomImage(dispatch) {
   const action = yield take('MAIN_RANDOM_IMAGE')
   while(true) {
     const countDog = yield select(getMainImage)
-    if(countDog.length === 2) {
+    if(countDog.length === 30) {
       break
     }
     const { message } = yield call(fetchRankApi, MAIN_IMAGE)
