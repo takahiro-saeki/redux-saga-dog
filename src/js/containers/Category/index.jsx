@@ -15,27 +15,27 @@ class Category extends Component {
   }
   
   componentDidMount() {
-    this.props.loadCategory()
+    this.props.loadCategory();
   }
   
   render() {
     const { dog } = this.props;
     return (
       <main>
-        <Header />
+        <Header title="category list view" />
         <List>
           <Subheader>{`category type is ${dog.length}`}</Subheader>
-          {dog.map(item => <CategoryList data={item} />)}
+          {dog.map(item => <CategoryList data={item} key={uuid.v4()} />)}
         </List>
       </main>
-    )
+    );
   }
 }
 
-const mapStateToProps = state => ({dog: state.dog})
+const mapStateToProps = state => ({dog: state.dog});
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(actions, dispatch);
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Category);

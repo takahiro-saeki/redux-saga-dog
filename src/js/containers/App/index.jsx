@@ -6,21 +6,22 @@ import * as actions from 'actions';
 import uuid from 'uuid';
 import { ImageWrap, ImageContainer, ResponsiveImg } from './style';
 
+const reduce = (data, flag) => data.filter((item, i) => i < flag);
+
 class App extends Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    this.props.loadCategory()
-    this.props.getMainImage()
+    const { loadCategory, getMainImage, setting } = this.props;
+    getMainImage(setting.count);
   }
 
   render() {
-
     return (
       <main>
-        <Header />
+        <Header title="main view" />
         <ImageContainer>
           {this.props.mainImage.map(item => (
             <ImageWrap key={uuid.v4()}>
@@ -29,17 +30,18 @@ class App extends Component {
           ))}
         </ImageContainer>
       </main>
-    )
+    );
   }
 }
 
 const mapStateToProps = state => ({
   dog: state.dog,
-  mainImage: state.mainImage
-})
+  mainImage: reduce(state.mainImage, state.setting.count),
+  setting: state.setting
+});
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(actions, dispatch);
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
