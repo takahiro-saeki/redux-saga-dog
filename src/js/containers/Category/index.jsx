@@ -7,6 +7,7 @@ import Subheader from 'material-ui/Subheader';
 import Divider from 'material-ui/Divider';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
+import msg from 'logic/msg';
 import CategoryList from 'components/CategoryList';
 
 class Category extends Component {
@@ -19,12 +20,12 @@ class Category extends Component {
   }
   
   render() {
-    const { dog } = this.props;
+    const { dog, lang } = this.props;
     return (
       <main>
-        <Header title="category list view" />
+        <Header title={msg(lang).categoryListView} lang={lang} />
         <List>
-          <Subheader>{`category type is ${dog.length}`}</Subheader>
+          <Subheader>{`${msg(lang).categoryType} ${dog.length}`}</Subheader>
           {dog.map(item => <CategoryList data={item} key={uuid.v4()} />)}
         </List>
       </main>
@@ -32,7 +33,7 @@ class Category extends Component {
   }
 }
 
-const mapStateToProps = state => ({dog: state.dog});
+const mapStateToProps = state => ({dog: state.dog, lang: state.lang});
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(actions, dispatch);
