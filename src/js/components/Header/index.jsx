@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import msg from 'logic/msg';
 
 const linkStyle = {
   textDecoration: 'none'
@@ -21,7 +22,7 @@ export default class Header extends Component {
   }
   
   render() {
-    const { title } = this.props;
+    const { title, lang } = this.props;
     return (
       <header>
         <AppBar
@@ -37,13 +38,13 @@ export default class Header extends Component {
           onRequestChange={this.handleChange}
         >
           <Link to="/" style={linkStyle}>
-            <MenuItem onClick={this.handleChange}>main view</MenuItem>
+            <MenuItem onClick={this.handleChange}>{msg(lang).mainView}</MenuItem>
           </Link>
           <Link to="/category" style={linkStyle}>
-            <MenuItem onClick={this.handleChange}>category list view</MenuItem>
+            <MenuItem onClick={this.handleChange}>{msg(lang).categoryListView}</MenuItem>
           </Link>
           <Link to="/setting" style={linkStyle}>
-            <MenuItem onClick={this.handleChange}>setting view</MenuItem>
+            <MenuItem onClick={this.handleChange}>{msg(lang).settingView}</MenuItem>
           </Link>
         </Drawer>
       </header>

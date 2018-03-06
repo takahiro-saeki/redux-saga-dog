@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
 import uuid from 'uuid';
+import msg from 'logic/msg';
 import { ImageWrap, ImageContainer, ResponsiveImg } from './style';
 
 const reduce = (data, flag) => data.filter((item, i) => i < flag);
@@ -19,9 +20,10 @@ class App extends Component {
   }
 
   render() {
+    const { lang } = this.props;
     return (
       <main>
-        <Header title="main view" />
+        <Header title={msg(lang).mainView} lang={lang} />
         <ImageContainer>
           {this.props.mainImage.map(item => (
             <ImageWrap key={uuid.v4()}>
@@ -37,7 +39,8 @@ class App extends Component {
 const mapStateToProps = state => ({
   dog: state.dog,
   mainImage: reduce(state.mainImage, state.setting.count),
-  setting: state.setting
+  setting: state.setting,
+  lang: state.lang
 });
 
 const mapDispatchToProps = dispatch => {

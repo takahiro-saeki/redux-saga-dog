@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as actions from 'actions';
 import RaisedButton from 'material-ui/RaisedButton';
 import Header from 'components/Header';
+import msg from 'logic/msg';
 
 const sliderStyle = {
   padding: '1rem 2rem'
@@ -21,12 +22,12 @@ class SettingView extends Component {
   
   render() {
     const { count } = this.state;
-    const { invokeChange } = this.props;
+    const { invokeChange, lang } = this.props;
     return (
       <main>
-        <Header title="setting view"/>
+        <Header title={msg(lang).settingView} lang={lang} />
         <div style={sliderStyle}>
-          <div>initial view size is: {count}</div>
+          <div>{msg(lang).initView}: {count}</div>
           <Slider
             min={0}
             max={30}
@@ -35,7 +36,7 @@ class SettingView extends Component {
             onChange={this.handleChange}
           />
           <RaisedButton 
-            label="Submit" 
+            label={msg(lang).submit} 
             primary 
             fullWidth 
             onClick={() => invokeChange(count)}
@@ -47,7 +48,8 @@ class SettingView extends Component {
 }
 
 const mapStateToProps = state => ({
-  setting: state.setting
+  setting: state.setting,
+  lang: state.lang
 });
 
 const mapDispatchToProps = dispatch => {
